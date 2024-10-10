@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    std::string final_command = "ffmpeg -i " + filename + " -c:a libvorbis " + filename.substr(0, pos_of_dot) + ".ogg";
+    std::string final_command = "ffmpeg -i \"" + filename + "\" -c:a libvorbis \"" + filename.substr(0, pos_of_dot) + ".ogg\"";
     system(final_command.c_str());
 
     return 0;
